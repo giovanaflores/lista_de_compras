@@ -1,1 +1,1 @@
-Sistema para criar uma lista de compras em um arquivo txt
+Sistema de mercado em python
