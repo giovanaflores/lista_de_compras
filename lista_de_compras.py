@@ -14,7 +14,13 @@ while True:
     opcao = input('Escolha uma opção: ')
     
     if opcao == '1':
-        item = input('Digite o nome do item: ')
+        try:
+            item = input('Digite o nome do item: ')
+            if not item.isalpha():
+                raise ValueError
+        except ValueError:
+            print('⚠ Opção inválida! Digite apenas palavras.')
+            continue
         item.capitalize()
         lista_compras.append(item)
         qtd_unidades_item = int(input('Quantidade de unidades deste item: '))
